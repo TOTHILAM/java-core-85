@@ -1,7 +1,9 @@
 git init    // khởi tạo git
 git status      // trạng thái project
-git add ... //chat hang len xe
-git comit -m message
-git remote add origin url
-git branch -M main tao nhanh chinh
-git push -u origin main day len nhanh main
+git add ... // chất hàng lên xe
+git comit -m "message" // tin nhắn
+git remote add origin url // copy đường dẫn
+git branch -M main // tạo nhánh chính
+git push -u origin main //đẩy code lên
+-- tạo nhánh và chuyển qua đó
+git checkout -b "branch name"
