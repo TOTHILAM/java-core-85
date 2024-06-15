@@ -5,3 +5,6 @@ git comit -m message
 git remote add origin url
 git branch -M main tao nhanh chinh
 git push -u origin main day len nhanh main
+-- tạo nhánh và chuyển qua đó
+git checkout -b "branch name"
+git branch -D "tên nhánh" // xóa nhánh
