@@ -7,3 +7,4 @@ git branch -M main // tạo nhánh chính
 git push -u origin main //đẩy code lên
 -- tạo nhánh và chuyển qua đó
 git checkout -b "branch name"
+git branch -D "tên nhánh" // xóa nhánh
