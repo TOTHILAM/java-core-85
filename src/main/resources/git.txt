@@ -1,0 +1,7 @@
+git init    // khởi tạo git
+git status      // trạng thái project
+git add ... //chat hang len xe
+git comit -m message
+git remote add origin url
+git branch -M main tao nhanh chinh
+git push -u origin main day len nhanh main
