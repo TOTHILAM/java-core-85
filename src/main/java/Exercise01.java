@@ -94,8 +94,12 @@ public class Exercise01 {
         Position p1 = new Position();
         p1.name = PositionName.DEV;
         switch (p1.name){
-            case DEV -> System.out.println("Đây là developer");
-            default -> System.out.println("Người này không phải là developer");
+            case DEV:
+                System.out.println("Đây là developer");
+                break;
+            default:
+                System.out.println("Người này không phải là developer");
+                break;
         }
     }
     void question08() {

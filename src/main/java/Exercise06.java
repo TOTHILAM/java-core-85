@@ -9,7 +9,6 @@ public class Exercise06 {
             System.out.println(account);
         }
     }
-
     void question03() {
         for (int n = 1; n < 10; n++) {
             System.out.println(n);
