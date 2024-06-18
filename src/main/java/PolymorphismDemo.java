@@ -1,7 +1,7 @@
 public class PolymorphismDemo {
     public static void main(String[] args) {
         // Tính đa hình
-        // instanceOf
+        // instanceOf: tìm xem nó xuất phát từ một đối tượng nào ...cat hay bird
         Runnable cat = new Cat();
         callRun(cat);
         Runnable bird = new Bird();
