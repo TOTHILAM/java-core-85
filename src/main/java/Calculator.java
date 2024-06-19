@@ -1,2 +1,5 @@
-package PACKAGE_NAME;public class Calculator {
+public class Calculator {
+    public int divide(int a, int b) {
+        return a / b;
+    }
 }

@@ -1,4 +1,4 @@
-public class TryCatchFinally {
+public class TryCatchFinallyDemo {
     public static void main(String[] args) {
         try {
             var calculator = new Calculator();
