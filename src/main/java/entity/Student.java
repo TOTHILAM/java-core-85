@@ -7,6 +7,9 @@ package entity;public class Student {
     public static int count;
 
     public Student(String name) {
+        if (count <= 7){
+            throw new IllegalStateException("du 7 hoc sinh");
+        }
         count++;
         this.name = name;
         this.id = count;
