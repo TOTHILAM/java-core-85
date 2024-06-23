@@ -82,18 +82,20 @@ public class Exercise01 {
         students.put(1, "Hùng");
         students.put(2, "Đức");
 
-        // In ra các key của students
+        // question07.a In ra các key của students
+        // keySet trả về tập hợp các key
         Set<Integer> keys = students.keySet();
         for (Integer key : keys) {
             System.out.println("key = " + key);
         }
 
-        // In ra value của students
+        // question07.b In ra value của students
+        // value trả về bộ sưu tập collection
         for (String value : students.values()) {
             System.out.println("value = " + value);
         }
 
-        // In ra danh sách students được sắp xếp theo tên của student
+        // question07.c In ra danh sách students được sắp xếp theo tên của student
         List<String> list = new LinkedList<>(students.values());
         Collections.sort(list);
         System.out.println(list);
