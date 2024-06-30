@@ -7,13 +7,9 @@ import java.sql.SQLException;
 import java.util.List;
 
 public interface IUserService {
-    List<User> findAll();
+    List<User> findEployeeByProjectId(int projectId);
 
-    User findById(int id) ;
+    List<User> findManager();
 
-    int deleteById(int id) ;
-
-    int create(String fullName, String email) ;
-
-    User findByEmailAndPassword(String email, String password) ;
+    User findManagerByEmailAndPassword(String email, String password) ;
 }

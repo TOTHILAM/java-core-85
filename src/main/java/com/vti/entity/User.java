@@ -13,6 +13,7 @@ public class User {
     private Role role;
     private String proSkill;
     private Integer expInYear;
+    private Integer projectId;
 
     public void setFullName(String fullName) {
         this.fullName = fullName;
@@ -66,11 +67,19 @@ public class User {
         return id;
     }
 
+    public Integer getProjectId() {
+        return projectId;
+    }
+
+    public void setProjectId(Integer projectId) {
+        this.projectId = projectId;
+    }
+
     public void setId(Integer id) {
         this.id = id;
     }
 
     public enum Role {
-        EMPLOYEE, ADMIN
+        EMPLOYEE, MANAGER
     }
 }

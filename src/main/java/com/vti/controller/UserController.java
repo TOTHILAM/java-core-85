@@ -20,46 +20,24 @@ public class UserController {
     /**
      * @return danh sách user trong database
      */
-    public List<User> findAll() {
-        return service.findAll();
+    public List<User> findEployeeByProjectId(int projectId) {
+        return service.findEployeeByProjectId(projectId);
     }
 
     /**
-     * @param id định dạng của user
-     * @return thông tin user tương ứng với với id, hoặc null nếu không tồn tại
+     * @return danh các manager
      */
-    public User findById(int id) {
-        return service.findById(id);
+    public List<User> findManager() {
+        return service.findManager();
     }
 
     /**
-     * @param id định dạng của user
-     * @return số bản ghi được xoá
-     */
-    public int deleteById(int id) {
-        return service.deleteById(id);
-    }
-
-    /**
-     * Cách dùng:
-     * <pre>{@code
-     * controller.create("Tô Thị Lâm", "lam@gmail.com")
-     * }
-     * @param fullName Họ và tên của user
-     * @param email Email của user
-     * @return Số bản ghi được tạo thành công
-     */
-    public int create(String fullName, String email) {
-        return service.create(fullName, email);
-    }
-
-    /**
-     * @param email    Email của user
-     * @param password Mật khẩu của user
-     * @return Thông tin user tương ứng với email và password,
+     * @param email email manager
+     * @param password password manager
+     * @return manager thông tin manager tương ứng với email và password
      * hoặc null nếu đăng nhập thất bại
      */
-    public User findByEmailAndPassword(String email, String password) {
-        return service.findByEmailAndPassword(email, password);
+    public User findManagerByEmailAndPassword(String email, String password) {
+        return service.findManagerByEmailAndPassword(email, password);
     }
 }

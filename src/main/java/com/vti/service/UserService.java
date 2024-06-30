@@ -2,7 +2,6 @@ package com.vti.service;
 
 import com.vti.entity.User;
 import com.vti.repository.IUserRepository;
-import lombok.AllArgsConstructor;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -17,45 +16,28 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public List<User> findAll() {
+    public List<User> findEployeeByProjectId(int projectId) {
         try {
-            return repository.findAll();
+            return repository.findEmployeeByProjectId(projectId);
         } catch (SQLException | IOException exception) {
             return List.of();
         }
     }
 
     @Override
-    public User findById(int id)  {
+    public List<User> findManager() {
         try {
-            return  repository.findById(id);
-        } catch (SQLException | IOException exception) {
-            return null;
+            return repository.findManager();
+        }catch (SQLException | IOException exception){
+            return List.of();
         }
     }
 
-    @Override
-    public int deleteById(int id) {
-        try {
-            return  repository.deleteById(id);
-        } catch (SQLException | IOException exception) {
-            return 0;
-        }
-    }
 
     @Override
-    public int create(String fullName, String email) {
+    public User findManagerByEmailAndPassword(String email, String password) {
         try {
-            return  repository.create(fullName, email);
-        } catch (SQLException | IOException exception) {
-            return 0;
-        }
-    }
-
-    @Override
-    public User findByEmailAndPassword(String email, String password) {
-        try {
-            return  repository.findByEmailAndPassword(email,password);
+            return  repository.findManagerByEmailAndPassword(email,password);
         } catch (SQLException | IOException exception) {
             return null;
         }
