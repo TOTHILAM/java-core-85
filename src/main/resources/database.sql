@@ -1,5 +1,5 @@
-DROP DATABASE IF EXISTS final_exam_04;
-CREATE DATABASE final_exam_04;
+DROP DATABASE IF EXISTS final_exam_05;
+CREATE DATABASE final_exam_05;
 USE final_exam_04;
 
 DROP TABLE IF EXISTS users;
@@ -16,7 +16,7 @@ CREATE TABLE users (
 
 INSERT INTO users (full_name        , email              , password  , role		 , pro_skill, exp_in_year, project_id)
 VALUES            ('Tô Thị Lâm',   'tolam0902@gmail.com', '123456Q' , 'EMPLOYEE', 'Java'   , NULL     , 1  ),
-				  ('Trần Trung Kiên', 'kientran@gmail.com' , '123456Q' , 'MANAGER'   , NULL     , 10        ,1  );
+				  ('Trần Huu Kiên', 'kientran@gmail.com' , '123456Q' , 'MANAGER'   , NULL     , 10        ,1  );
 
 DROP PROCEDURE IF EXISTS find_manager_by_email_and_password;
 DELIMITER $$
