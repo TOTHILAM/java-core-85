@@ -18,7 +18,8 @@ public class UserFunction {
         while (true) {
             System.out.println("1. Đăng nhập dành cho manager");
             System.out.println("2. Hiển thị danh sách Employee theo project id");
-            System.out.println("3. Thoát chương trình");
+            System.out.println("3. Hiển thị danh sách Manager");
+            System.out.println("4. Thoát chương trình");
             System.out.println("Mời bạn chọn chức năng");
             int menu = ScannerUtil.inputInt();
             switch (menu) {
@@ -29,8 +30,11 @@ public class UserFunction {
                 case 2: {
                     findEployeeByProjectId();
                     break;
+                }case 3: {
+                    findManager();
+                    break;
                 }
-                case 3: {
+                case 4: {
                     return;
                 }
                 default: {
