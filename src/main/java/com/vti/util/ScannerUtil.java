@@ -8,9 +8,7 @@ public class ScannerUtil {
     public static String inputString() {
         return scanner.nextLine()
                 .trim()
-                //loại bỏ khoảng trắng dư thừa
                 .replaceAll("\\s{2,}", " ");
-        // loại bỏ khoảng trắng dư thừa ở giữa có từ 2 dấu cách trở lên và thay bằng 1 dấu cách
     }
 
     public static String inputEmail() {
@@ -37,34 +35,31 @@ public class ScannerUtil {
         }
     }
 
-    //　bắt người dùng nhập đúng tên thì thôi
-    public static String inputFullName() {
-        while (true) {
-            String input = inputString();
-            if (hasAllAlphabeticCharacter(input)) {
-                return input;
-            } else {
-                System.out.println("Yêu cầu fullname chỉ chứ chữ");
-                System.err.println("Nhập lại");
-            }
-        }
-    }
+//    public static String inputFullName() {
+//        while (true) {
+//            String input = inputString();
+//            if (hasAllAlphabeticCharacter(input)) {
+//                return input;
+//            } else {
+//                System.out.println("Yêu cầu fullname chỉ chứ chữ");
+//                System.err.println("Nhập lại");
+//            }
+//        }
+//    }
 
-    // kiểm tra xem tất cả có phải là alphabetic không
-    private static boolean hasAllAlphabeticCharacter(String s) {
-        int length = s.length();
-        for (int i = 0; i < length; i++) {
-            char c = s.charAt(i);
-            // đầu tiên kiểm tra xem kí tự có phải dấu cách hay không
-            if (Character.isWhitespace(c)) {
-                continue;
-            }
-            if (!Character.isAlphabetic(c)) {
-                return false;
-            }
-        }
-        return true;
-    }
+//    private static boolean hasAllAlphabeticCharacter(String s) {
+//        int length = s.length();
+//        for (int i = 0; i < length; i++) {
+//            char c = s.charAt(i);
+//            if (Character.isWhitespace(c)) {
+//                continue;
+//            }
+//            if (!Character.isAlphabetic(c)) {
+//                return false;
+//            }
+//        }
+//        return true;
+//    }
 
     public static String inputPassword() {
         while (true) {
@@ -82,7 +77,6 @@ public class ScannerUtil {
         }
     }
 
-    // kiểm tra xem có bất kì kí tự viết hoa nào hay k
     public static boolean hasAnyUpperCaseCharacter(String s) {
         int length = s.length();
         for (int i = 0; i < length; i++) {

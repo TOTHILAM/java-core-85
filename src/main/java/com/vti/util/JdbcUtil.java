@@ -9,7 +9,6 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class JdbcUtil {
-    // tạo kết nối
     public static Connection getConnection() throws SQLException, IOException {
         String path = "src/main/resources/database.properties";
         try (FileInputStream fis = new FileInputStream(path)) {
@@ -20,11 +19,6 @@ public class JdbcUtil {
             String password = properties.getProperty("password");
             return  DriverManager.getConnection(url, user, password);
         }
-        // tên miền
-//        String url = "jdbc:mysql://localhost:3306/final_exam";
-//        String user = "root";
-//        String password = "Ritto2024";
-//        return DriverManager.getConnection(url, user, password);
     }
 
     public static void checkConnection() {
